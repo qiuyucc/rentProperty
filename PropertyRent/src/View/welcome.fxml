@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true" />
+
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #000000;" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text=" Welcome to Property Rent System">
+         <font>
+            <Font name="Rockwell" size="45.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="0.31904761904761897" endY="0.7095238095238094" startX="0.9571428571428572" startY="0.4738095238095238">
+               <stops>
+                  <Stop color="#9f6f6f" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Text>
+   </children>
+</StackPane>

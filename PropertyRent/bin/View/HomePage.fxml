@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="150.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton fx:id="btn_addProperty" accessibleText="btn_add" prefHeight="50.0" prefWidth="200.0" text="Add Property" />
+      <JFXButton fx:id="btn_displayProperty" accessibleText="btn_displayProperty" prefHeight="50.0" prefWidth="200.0" text="Display Property" />
+      <JFXButton fx:id="btn_save" accessibleText="btn_save" prefHeight="50.0" prefWidth="200.0" text="Save" />
+      <JFXButton fx:id="btn_import" accessibleText="btn_import" prefHeight="50.0" prefWidth="200.0" text="Import" />
+      <JFXButton fx:id="btn_export" accessibleText="btn_export" prefHeight="50.0" prefWidth="200.0" text="Export" />
+      <AnchorPane prefHeight="64.0" prefWidth="146.0" />
+      <JFXButton fx:id="btn_exit" accessibleText="btn_exit" prefHeight="50.0" prefWidth="200.0" text="Exit" />
+   </children>
+</VBox>

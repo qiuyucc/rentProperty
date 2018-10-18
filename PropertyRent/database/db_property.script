@@ -1,0 +1,96 @@
+SET DATABASE UNIQUE NAME HSQLDB66686FC5DB
+SET DATABASE GC 0
+SET DATABASE DEFAULT RESULT MEMORY ROWS 0
+SET DATABASE EVENT LOG LEVEL 0
+SET DATABASE TRANSACTION CONTROL LOCKS
+SET DATABASE DEFAULT ISOLATION LEVEL READ COMMITTED
+SET DATABASE TRANSACTION ROLLBACK ON CONFLICT TRUE
+SET DATABASE TEXT TABLE DEFAULTS ''
+SET DATABASE SQL NAMES FALSE
+SET DATABASE SQL REFERENCES FALSE
+SET DATABASE SQL SIZE TRUE
+SET DATABASE SQL TYPES FALSE
+SET DATABASE SQL TDC DELETE TRUE
+SET DATABASE SQL TDC UPDATE TRUE
+SET DATABASE SQL CONCAT NULLS TRUE
+SET DATABASE SQL UNIQUE NULLS TRUE
+SET DATABASE SQL CONVERT TRUNCATE TRUE
+SET DATABASE SQL AVG SCALE 0
+SET DATABASE SQL DOUBLE NAN TRUE
+SET FILES WRITE DELAY 500 MILLIS
+SET FILES BACKUP INCREMENT TRUE
+SET FILES CACHE SIZE 10000
+SET FILES CACHE ROWS 50000
+SET FILES SCALE 32
+SET FILES LOB SCALE 32
+SET FILES DEFRAG 0
+SET FILES NIO TRUE
+SET FILES NIO SIZE 256
+SET FILES LOG TRUE
+SET FILES LOG SIZE 50
+CREATE USER SA PASSWORD DIGEST 'd41d8cd98f00b204e9800998ecf8427e'
+ALTER USER SA SET LOCAL TRUE
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+SET SCHEMA PUBLIC
+CREATE MEMORY TABLE PUBLIC.RENTAL_PROPERTY(PROPERTYID VARCHAR(25) NOT NULL PRIMARY KEY,STREETNUMBER INTEGER NOT NULL,STREETNAME VARCHAR(25) NOT NULL,SUBURB VARCHAR(20) NOT NULL,NUMOFBEDROOMS INTEGER NOT NULL,PROPERTYTYPE VARCHAR(20) NOT NULL,PROPERTYSTATUS VARCHAR(20) NOT NULL,URL VARCHAR(50),DESCRIPTION VARCHAR(255) NOT NULL,MAINTENANCEDATE VARCHAR(20))
+CREATE MEMORY TABLE PUBLIC.RENTAL_RECORD(PROPERTYID VARCHAR(25) NOT NULL,RENTID VARCHAR(255) NOT NULL,RENTDATE VARCHAR(25) NOT NULL,ESTRETURNDATE VARCHAR(25) NOT NULL,ACTRETURNDATE VARCHAR(25) NOT NULL,RENTALFEE DOUBLE NOT NULL,LATEFEE DOUBLE NOT NULL)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 1
+SET DATABASE DEFAULT INITIAL SCHEMA PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.SQL_IDENTIFIER TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.YES_OR_NO TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.TIME_STAMP TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.CARDINAL_NUMBER TO PUBLIC
+GRANT USAGE ON DOMAIN INFORMATION_SCHEMA.CHARACTER_DATA TO PUBLIC
+GRANT DBA TO SA
+SET SCHEMA SYSTEM_LOBS
+INSERT INTO BLOCKS VALUES(0,2147483647,0)
+SET SCHEMA PUBLIC
+INSERT INTO RENTAL_PROPERTY VALUES('A_19_City Rd_Dockland',19,'City Rd','Dockland',2,'Apartment','Available','images/9.jpg','Newly refurbished with brand new carpets, paint and blinds, this incredibly spacious one bedroom apartment needs to be inspected to be truly appreciated',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_19_Coventry St_Boxhill',19,'Coventry St','Boxhill',2,'Apartment','Available','images/10.jpg','This remarkable one bedroom apartment offers quality fittings and intelligent design. Situated in Australis complex. ',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_25_City Rd_Dockland',25,'City Rd','Dockland',3,'Apartment','Available','images/6.jpg','These spectacular apartments have been architecturally designed, boast indulgent views and bespoke interior design, in a light filled and liberating space . ',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_27_Bourke St_Southbank',27,'Bourke St','Southbank',2,'Apartment','Available','images/2.jpg','This great sized functional studio has everything you need for comfortable city living!',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_33_Bourke St_Southbank',33,'Bourke St','Southbank',2,'Apartment','Available','images/3.jpg','Tastefully furnished throughout and conveniently located close to parks, public transport, cafes and plenty more!',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_35_Bourke St_Southbank',35,'Bourke St','Southbank',3,'Apartment','Available','images/4.jpg','Featuring good sized lounge room/bedroom, large kitchen/dining with quality appliances and functional bathroom with laundry facilities.',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_41_City Rd_Dockland',41,'City Rd','Dockland',2,'Apartment','Available','images/5.jpg','The perfect mix of comfort, class and convenience! Securely nestled on the first floor of this charming Manhattan style complex, you will surely feel at home',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_61_Bourke St_Southbank',61,'Bourke St','Southbank',1,'Apartment','Available','images/1.jpg','Offering a gracious concierge, a fully equipped gymnasium, lap pool, tennis court, fabulous outdoor BBQ garden entertaining area for the residents enjoyment.',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_68_City Rd_Dockland',68,'City Rd','Dockland',3,'Apartment','Available','images/8.jpg','These spectacular apartments have been architecturally designed, boast indulgent views and bespoke interior design, in a light filled and liberating space.',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('A_79_City Rd_Dockland',79,'City Rd','Dockland',3,'Apartment','Available','images/no-image.jpg','Within walking distance to Southern Cross station, crown casino, Southbank, restaurants, shops and cafes this fabulous location will impress! Ideal for students. ',NULL)
+INSERT INTO RENTAL_PROPERTY VALUES('S_29_Kilda St_Fitzory',29,'Kilda St','Fitzory',3,'Premium Suite','Available','images/13.jpg','These spectacular apartments have been architecturally designed, boast indulgent views and bespoke interior design, in a light filled and liberating space ','02/10/2018')
+INSERT INTO RENTAL_PROPERTY VALUES('S_41_Kilda St_Fitzory',41,'Kilda St','Fitzory',3,'Premium Suite','Available','images/2.jpg','Offering a gracious concierge, a fully equipped gymnasium, lap pool, tennis court, fabulous outdoor BBQ garden entertaining area for the residents enjoyment,.','02/10/2018')
+INSERT INTO RENTAL_PROPERTY VALUES('S_42_Coventry St_Boxhill',42,'Coventry St','Boxhill',3,'Premium Suite','Available','images/12.jpg','Tastefully furnished throughout and conveniently located close to parks, public transport, cafes and plenty more!','05/10/2018')
+INSERT INTO RENTAL_PROPERTY VALUES('S_5_Coventry St_Boxhill',5,'Coventry St','Boxhill',3,'Premium Suite','Available','images/11.jpg','Offering a gracious concierge, a fully equipped gymnasium, lap pool, tennis court, fabulous outdoor BBQ garden entertaining area for the residents enjoyment','05/10/2018')
+INSERT INTO RENTAL_PROPERTY VALUES('S_75_Kilda St_Fitzory',75,'Kilda St','Fitzory',3,'Premium Suite','Available','images/14.jpg','Accommodation features open plan living/dining area with floor to ceiling windows.','03/09/2018')
+INSERT INTO RENTAL_RECORD VALUES('A_19_City Rd_Dockland','A_19_City Rd_Dockland_cus100_29102018','29/10/2018','10/11/2018','29/10/2018',420.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_19_City Rd_Dockland','A_19_Coventry St_Boxhill_CUS014_21092018','21/09/2018','24/09/2018','21/09/2018',957.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_19_City Rd_Dockland','A_19_Coventry St_Boxhill_CUS016_25092018','25/09/2018','28/09/2018','25/09/2018',957.0E0,366.85E0)
+INSERT INTO RENTAL_RECORD VALUES('A_19_Coventry St_Boxhill','A_19_Coventry St_Boxhill_CUS022_01092018','01/09/2018','03/09/2018','01/09/2018',1108.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_19_Coventry St_Boxhill','A_19_Coventry St_Boxhill_CUS023_04092018','04/09/2018','06/09/2018','04/09/2018',1109.0E0,662.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_25_City Rd_Dockland','A_25_City Rd_Dockland_CUS011_11092018','11/09/2018','14/09/2018','11/09/2018',630.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_25_City Rd_Dockland','A_25_City Rd_Dockland_CUS012_15092018','15/09/2018','19/09/2018','15/09/2018',630.0E0,483.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_27_Bourke St_Southbank','A_27_Bourke St_Southbank_User_17102018','17/10/2018','29/10/2018','17/10/2018',0.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_27_Bourke St_Southbank','A_27_Bourke St_Southbank_CUS003_01092018','01/09/2018','04/09/2018','01/09/2018',429.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_27_Bourke St_Southbank','A_27_Bourke St_Southbank_CUS004_05092018','05/09/2018','09/09/2018','05/09/2018',572.0E0,164.45E0)
+INSERT INTO RENTAL_RECORD VALUES('A_33_Bourke St_Southbank','A_33_Bourke St_Southbank_CUS005_01092018','01/09/2018','04/09/2018','01/09/2018',429.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_33_Bourke St_Southbank','A_33_Bourke St_Southbank_CUS006_05092018','05/09/2018','09/09/2018','05/09/2018',572.0E0,164.45E0)
+INSERT INTO RENTAL_RECORD VALUES('A_35_Bourke St_Southbank','A_35_Bourke St_Southbank_CUS007_01092018','01/09/2018','04/09/2018','01/09/2018',429.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_35_Bourke St_Southbank','A_35_Bourke St_Southbank_CUS008_05092018','05/09/2018','09/09/2018','05/09/2018',572.0E0,164.45E0)
+INSERT INTO RENTAL_RECORD VALUES('A_41_City Rd_Dockland','A_41_City Rd_Dockland_CUS009_11092018','11/09/2018','14/09/2018','11/09/2018',630.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_41_City Rd_Dockland','A_41_City Rd_Dockland_CUS010_15092018','15/09/2018','19/09/2018','15/09/2018',630.0E0,483.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_61_Bourke St_Southbank','A_61_Bourke St_Southbank_CUS001_01092018','01/09/2018','04/09/2018','01/09/2018',429.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_61_Bourke St_Southbank','A_61_Bourke St_Southbank_CUS002_05092018','05/09/2018','09/09/2018','05/09/2018',572.0E0,164.45E0)
+INSERT INTO RENTAL_RECORD VALUES('A_68_City Rd_Dockland','A_68_City Rd_Dockland_CUS013_11092018','11/09/2018','14/09/2018','11/09/2018',630.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_68_City Rd_Dockland','A_68_City Rd_Dockland_CUS014_15092018','15/09/2018','19/09/2018','15/09/2018',630.0E0,483.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_79_City Rd_Dockland','A_79_City Rd_Dockland_CUS020_01092018','01/09/2018','03/09/2018','01/09/2018',1108.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('A_79_City Rd_Dockland','A_79_City Rd_Dockland_CUS021_04092018','04/09/2018','06/09/2018','04/09/2018',1109.0E0,662.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_29_Kilda St_Fitzory','S_29_Kilda St_Fitzory_CUS014_01092018','01/09/2018','03/09/2018','01/09/2018',1108.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_29_Kilda St_Fitzory','S_29_Kilda St_Fitzory_CUS012_04092018','04/09/2018','06/09/2018','04/09/2018',1109.0E0,662.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_41_Kilda St_Fitzory','S_41_Kilda St_Fitzory_CUS021_01092018','01/09/2018','03/09/2018','01/09/2018',1108.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_41_Kilda St_Fitzory','S_41_Kilda St_Fitzory_CUS032_04092018','04/09/2018','06/09/2018','04/09/2018',1109.0E0,662.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_42_Coventry St_Boxhill','S_42_Coventry St_Boxhill_CUS015_21092018','21/09/2018','24/09/2018','21/09/2018',957.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_42_Coventry St_Boxhill','S_42_Coventry St_Boxhill_CUS016_25092018','25/09/2018','28/09/2018','25/09/2018',957.0E0,366.85E0)
+INSERT INTO RENTAL_RECORD VALUES('S_42_Coventry St_Boxhill','S_42_Coventry St_Boxhill_CUS023_01092018','01/09/2018','03/09/2018','01/09/2018',1108.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_42_Coventry St_Boxhill','S_42_Coventry St_Boxhill_CUS021_04092018','04/09/2018','06/09/2018','04/09/2018',1109.0E0,662.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_5_Coventry St_Boxhill','S_5_Coventry St_Boxhill_CUS015_21092018','21/09/2018','24/09/2018','21/09/2018',957.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_5_Coventry St_Boxhill','S_5_Coventry St_Boxhill_CUS016_25092018','25/09/2018','28/09/2018','25/09/2018',957.0E0,366.85E0)
+INSERT INTO RENTAL_RECORD VALUES('S_75_Kilda St_Fitzory','S_75_Kilda St_Fitzory_CUS021_01092018','01/09/2018','03/09/2018','01/09/2018',1108.0E0,0.0E0)
+INSERT INTO RENTAL_RECORD VALUES('S_75_Kilda St_Fitzory','S_75_Kilda St_Fitzory_CUS032_04092018','04/09/2018','06/09/2018','04/09/2018',1109.0E0,662.0E0)

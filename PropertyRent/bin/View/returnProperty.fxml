@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/10.0.1" fx:controller="Controller.returnPropertyController">
+   <children>
+      <ImageView fx:id="imagelistView" fitHeight="150.0" fitWidth="320.0" layoutX="35.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="label_Id" layoutX="35.0" layoutY="192.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btn_return" layoutX="92.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClick_btn_return" prefHeight="35.0" prefWidth="77.0" text="Return" />
+      <Button fx:id="btn_back" layoutX="222.0" layoutY="340.0" mnemonicParsing="false" onAction="#onClick_btn_back" prefHeight="35.0" prefWidth="77.0" text="Cancel" />
+      <Label layoutX="35.0" layoutY="249.0" text="Return Date">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="timer_return" layoutX="135.0" layoutY="246.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.completeMaintainController">
+   <children>
+      <Label fx:id="label_Id" layoutX="44.0" layoutY="29.0" text="Label">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="label_Id1" layoutX="44.0" layoutY="81.0" text="Complete Date">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="timer_complete" layoutX="159.0" layoutY="78.0" />
+      <Button fx:id="btn_complete" layoutX="95.0" layoutY="149.0" mnemonicParsing="false" onAction="#onClick_btn_complete" text="Comfirm" />
+      <Button fx:id="btn_back" layoutX="257.0" layoutY="149.0" mnemonicParsing="false" onAction="#onClick_btn_back" text="Cancel" />
+   </children>
+</AnchorPane>
